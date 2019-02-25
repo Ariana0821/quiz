@@ -17,18 +17,18 @@ $(document).ready(function() {
     });
         function findQues1(q1Result){
             if (q1Result === "Tacos"){
-                return 2;
+                return 8;
             }
             else if (q1Result === "Chocolate Cake"){
-                return 3
+                return 4;
             }
             else if (q1Result === "Sushi"){
-                return 4
+                return 3;
             }
         }
         function findQues2(q2Result){
             if (q2Result === "Dumb and Dumber"){
-                return 5;
+                return 10;
             }
             else if (q2Result === "The Notebook"){
                 return 6;
@@ -39,13 +39,13 @@ $(document).ready(function() {
     }
         function findQues3(q3Result){
             if (q3Result === "Green"){
-                return 8;
+                return 12;
             }
             else if (q3Result === "Orange"){
                 return 9;
             }
             else if (q3Result === "Blue"){
-                return 9;
+                return 4;
             }
         }
         
@@ -54,20 +54,23 @@ $(document).ready(function() {
         var imgSrc;
         if (totalScore > 21) {
             techplacement = "Shawn Mendes";
-            imgSrc="https://media.giphy.com/media/oeH2Qj4fLoZy0/giphy.gif";
+            imgSrc="https://www.flare.com/wp-content/uploads/2017/08/FEATURE_ShawnMendes.jpg";
         }
         else if (totalScore >16 && totalScore <= 21) {
             techplacement = "Harry Styles";
-            imgSrc="https://media.giphy.com/media/l41lX2yEwhnD6QrLi/giphy.gif";
+            imgSrc="https://data.whicdn.com/images/189360574/original.jpg";
         }
-        else if (totalScore > 11 && totalScore <= 16) {
+        else if (totalScore <=16) {
             techplacement = "Zac Effron";
-            imgSrc="https://media.giphy.com/media/zWyv9xtsEfXQQ/giphy.gif";
+            imgSrc="https://cps-static.rovicorp.com/3/JPG_500/MI0003/157/MI0003157788.jpg?partner=allrovi.com";
         }
     displayPlacement(name, techplacement, imgSrc);
     }
     
-    function displayPlacement(name, person, image){
+    function displayPlacement(name, person, imgSrc){
         $(".result").html("<div>Hi</div>");
+        $(".result").html("<h1>Congrats " + name + " you end up with " + person + "<img src= " + imgSrc + ">" + "</h1>");
+        $(".result").css("height", "20%");
+        $(".result").css("width", "20%");
     }
 });
